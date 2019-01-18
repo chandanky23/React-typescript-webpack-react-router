@@ -1,12 +1,10 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { Hello } from './components/Hello';
+import Routes from './routes'
 declare let module: any
 
-ReactDOM.render(
-  <Hello compiler="typescript" framework="React" bundler="Webpack" />,
-  document.getElementById('root')
+ReactDOM.render( <Routes />, document.getElementById('root')
 );
 
 if(module.hot)
