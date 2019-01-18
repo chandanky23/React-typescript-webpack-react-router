@@ -1,10 +1,14 @@
 import React from 'react'
 import Box from '../../components/Box'
 
-class Home extends React.PureComponent {
+interface Props {}
+
+export class Home extends React.PureComponent<Props>{
   render() {
     return (
       <Box />
     )
   }
 }
+
+export default Home

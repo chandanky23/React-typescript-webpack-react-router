@@ -4,8 +4,9 @@
 //   loader: () => import(/* webpackChunkName: 'home' */'./index')
 // });
 import AboutUs from './index'
+import { RouteConfig } from 'react-router-config';
 
-const HomePageRoute = [
+const AboutPageRoute: RouteConfig[] = [
   {
     path: '/about',
     component: AboutUs,
@@ -13,4 +14,4 @@ const HomePageRoute = [
   }
 ];
 
-export default HomePageRoute;
+export default AboutPageRoute;
