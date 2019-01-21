@@ -5,7 +5,7 @@ const path = require('path'),
 module.exports = {
   entry: {
     app: ['./src/app/App.tsx', 'webpack-hot-middleware/client'],
-    vendor: ['react', 'react-dom']
+    vendor: ['react', 'react-dom', 'react-router-dom']
   },
   output: {
     path: path.resolve(__dirname, 'build'),
@@ -18,16 +18,18 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(tx|tsx)$/,
-        loader: 'ts-loader'
+        test: /\.(ts|tsx)$/,
+        loader: 'ts-loader',
       },
       {
         enforce: "pre",
         test: /\.js$/,
         loader: "source-map-loader",
       },
-      test: /\.css$/,
-      loader: "css-loader"
+      {
+        test: /\.css$/,
+        loader: "css-loader"
+      }
     ]
   },
   plugins: [
