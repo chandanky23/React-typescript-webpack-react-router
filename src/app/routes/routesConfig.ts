@@ -4,10 +4,10 @@ import { RouteConfig } from 'react-router-config';
 
 
 
-const mainRoutes: RouteConfig[] = [].concat(Home, AboutUs);
+const mainRoutes: RouteConfig[] = [...Home,... AboutUs ]
 //TODO: Create a error page
 const errorRoutes: RouteConfig[] = [];
 
-const allRoutes: RouteConfig[] = [].concat(mainRoutes, errorRoutes)
+const allRoutes: RouteConfig[] = [...mainRoutes, ...errorRoutes]
 
 export default allRoutes;

@@ -5,7 +5,7 @@ const path = require('path'),
 module.exports = {
   entry: {
     app: ['./src/app/App.tsx', 'webpack-hot-middleware/client'],
-    vendor: ['react', 'react-dom', 'react-router-dom',]
+    vendor: ['react', 'react-dom', 'react-router-dom']
   },
   output: {
     path: path.resolve(__dirname, 'build'),

@@ -10,7 +10,7 @@ const BoxContainer = styled.div<BoxContainerProps>`
   box-sizzing: border-box;
   border-radius: 4px;
   color: grey;
-  ${props => props.isSpace && `
+  ${(props: BoxContainerProps) => props.isSpace && `
   background-color: #000000;
   `}
 
