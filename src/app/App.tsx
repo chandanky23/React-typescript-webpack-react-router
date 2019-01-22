@@ -4,7 +4,9 @@ import * as ReactDOM from 'react-dom';
 import Routes from './routes'
 declare let module: any
 
-ReactDOM.render( <Routes />, document.getElementById('root')
+ReactDOM.render(
+  <Routes />,
+  document.getElementById('root')
 );
 
 if(module.hot)
