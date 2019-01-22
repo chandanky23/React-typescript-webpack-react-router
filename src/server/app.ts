@@ -5,7 +5,7 @@ import devServer from '../../webpack/dev'
 
 const app = express(),
   port = process.env.PORT || 5000,
-  isDevelopment = process.env.NODE_ENV || 'development';
+  isDevelopment = process.env.NODE_ENV === 'development';
 
 
 if (isDevelopment) {
