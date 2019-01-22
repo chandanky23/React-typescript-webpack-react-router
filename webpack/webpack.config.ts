@@ -1,14 +1,14 @@
-const path = require('path'),
-  webpack = require('webpack'),
-  htmlWebpackPlugin = require('html-webpack-plugin');
+import path from 'path'
+import webpack from 'webpack'
+import htmlWebpackPlugin from 'html-webpack-plugin'
 
-module.exports = {
+const config: webpack.Configuration = {
   entry: {
     app: ['./src/app/App.tsx', 'webpack-hot-middleware/client'],
     vendor: ['react', 'react-dom', 'react-router-dom']
   },
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, '../', 'build'),
     filename: 'js/[name].bundle.js'
   },
   devtool: 'source-map',
@@ -20,6 +20,7 @@ module.exports = {
       {
         test: /\.(ts|tsx)$/,
         loader: 'ts-loader',
+        options: {configFile: 'tsconfig-client.json'}
       },
       {
         enforce: "pre",
@@ -34,8 +35,10 @@ module.exports = {
   },
   plugins: [
     new htmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src', 'app', 'index.html')
+      template: path.resolve(__dirname, '../', 'src', 'app', 'index.html')
     }),
     new webpack.HotModuleReplacementPlugin()
   ]
 }
+
+export default config
