@@ -9,9 +9,8 @@
     "build:app": "webpack",
     "build:server": "tsc --build tsconfig-server.json --pretty",
     "start": "npm run build && ts-node --project ./tsconfig-server.json src/server/app.ts",
-    "dev": "cross-env run-p 'watch'",
-    "watch": "nodemon --config ./nodemon.json -L"
-
+    "dev:client": "TS_NODE_PROJECT=\"tsconfig-server.json\" webpack-dev-server -d --history-api-fallback --inline --colors --config webpack/webpack.config.ts --port 3000",
+    "dev:server": "nodemon --config ./nodemon.json -L"
   },
   "keywords": [],
   "author": "",
