@@ -1,3 +1,10 @@
-node_modules
-yarn.lock
-/dist
+# misc
+.idea
+.DS_Store
+.env
+npm-debug.log*
+
+**/node_modules
+build/
+e2e-results/**/*
+!e2e-results/cucumber-html-reporter.ts

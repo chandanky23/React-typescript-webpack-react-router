@@ -1,0 +1,23 @@
+{
+  "extends": "./tsconfig-base.json",
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "noImplicitThis": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "target": "es5",
+    "lib": [
+      "es2015",
+      "es2016.array.include",
+      "dom",
+      "es6",
+      "dom.iterable",
+      "scripthost"
+    ],
+    "baseUrl": ".src/"
+  },
+  "include": [
+    "./src/server/**/*"
+  ]
+}
